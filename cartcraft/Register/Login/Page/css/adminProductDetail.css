@@ -1,0 +1,924 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff2e2;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+
+.products-text {
+    font-size: 34px;
+    padding-top: 5px;
+}   
+
+.container {
+    display: flex;
+    overflow: hidden;
+    margin: 60px;
+    align-items: flex-start; 
+}
+
+
+.image-container {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+}
+
+.product-type-text {
+    margin: 0 60px;
+    border-radius: 5px;
+    margin-top: -15px;
+    font-weight: bold;
+    font-size: 34px;
+    color: #000;
+}
+
+
+.product-image {
+    border: 10px solid #000000;
+    box-shadow: 0 0 0 10px #fff2e2, 0 0 0 20px #000000;
+    max-height: 450px;
+    min-height: 300px;
+    max-width: 500px;
+    margin: 30px 45px;
+    margin-left: 80px;
+}
+
+.info-container {
+    flex: 1;
+    padding: 40px;
+    background-color: #fae8d2;
+    margin-right: 80px;
+    margin-left: 120px;
+    border-radius: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+.label {
+    text-align: left;
+    font-size: 14px;
+}
+
+.button {
+    padding: 10px 20px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.add-to-cart {
+    background-color: #f2d2ab;
+     width: 140px;
+}
+
+.buy-now {
+    background-color: #f2d2ab;
+    width: 140px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #eecba0;
+}
+
+#desc {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    grid-column: 1;
+}
+
+.descript {
+    grid-column: 1 / 3; 
+    text-align: justify; 
+    margin-top: 10px; 
+}
+
+.centered-text {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 80px;
+    font-size: 14px;
+}
+
+
+h2 {
+    margin-top: -5px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+p {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+.action-buttons {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.accept-button, .decline-button, .edit-button {
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.accept-button {
+    background-color: #f2d2ab;
+}
+
+.accept-button:hover {
+    background-color: #f2bf81;
+}
+
+.decline-button {
+    background-color: #f2d2ab;
+}
+
+.decline-button:hover {
+    background-color: #f2bf81;
+}
+
+.edit-button{
+    background-color: #f2d2ab;
+}
+
+.edit-button:hover {
+    background-color: #f2bf81;
+}
+
+
+.auction-status {
+    position: absolute;
+    top: 130px;
+    right: 150px;
+    background-color: #f2d2ab;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notification-modal {
+    background-color: #f2d2ab;
+    color: #000000;
+    border: 1px solid #fae8d2;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn {
+    background-color: #fae8d2;
+    color: #000000;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    background-color: #f5b970;
+}
+
+.like-container {
+    position: relative;
+    top: -15px;
+    left: -15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: -30px;
+}
+
+#like-button {
+    font-size: 28px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+#like-button:hover {
+    color: darkred;
+}
+
+.quantity-selector {
+    border-radius: 7px;
+    background-color: #fff2e2;
+    margin-top: 17px;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 80px;
+    width: 28%;
+}
+
+#decrement{
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#increment{
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;    
+}
+
+.quantity {
+
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+}
+
+.button.disabled {
+    pointer-events: none; 
+    opacity: 0.5;      
+    cursor: not-allowed; 
+}
+
+
+.notification-modal p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bid-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bid-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #fae8d2;
+    border-radius: 10px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.bid-info p {
+    margin: 10px 0;
+    display: flex;
+}
+
+.bid-info .starting-bid {
+    font-weight: bold;
+    font-size: 17px;
+    justify-content: space-between;
+}
+
+.bid-info .current-bid-info {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.bid-info .current-bid-info p {
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: 500;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.bid-info .time-remain {
+    margin-bottom: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    justify-content: space-between;
+}
+
+.time-remaining {
+    background-color: #ffd6af;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.bid-actions {
+    flex: 1.5;
+    padding: 20px;
+    background-color: #fae8d2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.buy-now[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.bid-actions.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.bid-actions h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bid-buttons {
+    gap: 10px;
+    display: grid; 
+    align-items: center; 
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.bid-buttons button {
+    background-color: #ffd6af;
+    color: #555;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 180px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.bid-buttons button:hover {
+    background-color: #f5b970;
+}
+
+.custom-bid {
+    padding: 0 30px;
+}
+
+.custom-price {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.custom-bid input {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #fff2e2;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+
+.submit-bid {
+    padding: 1px 15px;
+    background-color: #ffd6af;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff2e2;
+}
+
+.custom-bid .submit-bid:hover {
+    background-color: #f5b970;
+}
+
+.burger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000; 
+    margin: 4px;
+    transition: all 0.3s ease; 
+}
+
+.cart-icon {
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transform: scaleX(-1);
+}
+
+.cart-icon:hover {
+    color: #555;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar.hidden {
+    display: none;
+}
+
+ @media (max-width: 1024px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: #fae8d2;
+        width: 100%;
+        top: 68px;
+        left: 0;
+        z-index: 99;
+        border: 1px solid #f5b970;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #f5b970;
+    }
+
+    .burger.active div {
+        background-color: #fff;
+    }
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .profile-dropdown{
+        display: none;
+    }
+
+    .mobile-account-links {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-account-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #fae8d2;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .mobile-account-links {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+    .container {
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+    }
+
+    h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .auction-status {
+        position: absolute;
+        top: 655px;
+        right: 35px;
+        background-color: #f2d2ab;
+        color: white;
+        padding: 7px 8px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px; 
+        width: 100%; 
+    }
+    
+    .product-type-text {
+        text-align: center; 
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .product-image {
+        max-width: 100%; 
+        height: 50%; 
+        margin: 10px 0;
+        border: 5px solid #000000; 
+        box-shadow: 0 0 0 5px #fff2e2, 0 0 0 10px #000000;
+    }
+
+    .info-container {
+        width: 100%; 
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+
+    .action-buttons {
+        display: flex;
+        justify-content: center; 
+        width: 100%; 
+    }
+
+    .accept-button, .decline-button {
+        padding: 10px 20px; 
+        margin: 10px; 
+        font-size: 14px;
+        margin-right: 50px;
+    }
+
+    @media (max-width: 480px) {
+        
+        .product-type-text {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .product-image {
+            border: 8px solid #000000;
+            box-shadow: 0 0 0 8px #fff2e2, 0 0 0 16px #000000;
+            max-height: 350px;
+            min-height: 300px;
+            max-width: 355px;
+        }
+        
+
+        .auction-status {
+            top: 560px;
+            right: 35px;
+            padding: 7px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .label {
+            text-align: left;
+            font-size: 14px;
+
+        }
+        
+        .button {
+            padding: 10px 20px;
+            text-align: center;
+            color: #000;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .add-to-cart {
+            background-color: #f2d2ab;
+             width: 140px;
+        }
+        
+        .buy-now {
+            background-color: #f2d2ab;
+            width: 140px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #eecba0;
+        }
+        
+        #desc {
+            margin-top: 30px;
+            text-align: left;
+            font-size: 14px;
+            grid-column: 1;
+        }
+        
+        .descript {
+            grid-column: 1 / 3; 
+            text-align: justify; 
+            margin-top: 10px; 
+        }
+        
+        .centered-text {
+            font-weight: bold;
+            text-align: left;
+            margin-left: 60px;
+            font-size: 13px;
+        }
+        
+        
+        h2 {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+        }
+        
+        p {
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-align: justify;
+            font-size: 14px;
+        }
+
+        .quantity-selector {
+            border-radius: 7px;
+            background-color: #fff2e2;
+            margin-top: 17px;
+            font-size: 14px;
+            padding: 5px;
+            text-align: left;
+            margin-left: 60px;
+            width: 50%;
+        }
+        
+        #decrement{
+            width: 20px;
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #increment{
+            width: 20px;
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;    
+        }
+        
+        .quantity {
+            width: 35px;
+            text-align: center;
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+        }
+        
+        
+        .like-container {
+            position: relative;
+            top: -7px;
+            left: -2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: -30px;
+        }
+        
+        #like-button {
+            font-size: 25px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .bid-container {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .bid-info {
+            flex: 1;
+            padding: 20px;
+            background-color: #fae8d2;
+            border-radius: 10px;
+            color: #333;
+            font-size: 16px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .bid-info p {
+            margin: 10px 0;
+            display: flex;
+        }
+        
+        .bid-info .starting-bid {
+            font-weight: bold;
+            font-size: 16px;
+            justify-content: space-between;
+        }
+        
+        .bid-info .current-bid-info {
+            display: flex;
+            flex-direction: column;
+            margin: 50px 0;
+        }
+        
+        .bid-info .current-bid-info p {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: 500;
+            font-weight: bold;
+            justify-content: space-between;
+        }
+        
+        .bid-info .time-remain {
+            margin-bottom: 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            justify-content: space-between;
+        }
+        
+        .time-remaining {
+            background-color: #ffd6af;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: -5px;
+        }
+        
+        .bid-actions {
+            flex: 1.5;
+            padding: 20px;
+            background-color: #fae8d2;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        button.buy-now[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .bid-actions.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .bid-actions h3 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .bid-buttons {
+            gap: 10px;
+            display: grid; 
+            align-items: center; 
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .bid-buttons button {
+            background-color: #ffd6af;
+            color: #555;
+            border: none;
+            padding: 15px 15px;
+            border-radius: 10px;
+            width: 150px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        
+        .bid-buttons button:hover {
+            background-color: #f5b970;
+        }
+        
+        .custom-bid {
+            padding: 0 30px;
+        }
+        
+        .custom-price {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .custom-bid input {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        
+        .submit-bid {
+            padding: 1px 15px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #fff2e2;
+        }
+
+        
+    }
+    
+
+
+}
+

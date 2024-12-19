@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff2e2;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #fae8d2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.manage { 
+    margin-top: 80px;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-image {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 32px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff2e2;
+    transition: border 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-image:hover {
+    border-color: #f2d2ab;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    font-weight: 100;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 32px;
+}
+
+input {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    background-color: #fff2e2;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #f2d2ab
+  }
+
+  .password-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.password-container input {
+    padding-right: 100px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 45px;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    user-select: none;
+}
+
+.password-toggle:hover {
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin: 0 33px;
+}
+
+.save-button {
+    background-color: #f2c58d;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.save-button:hover {
+    background-color: #f2bb77;
+}
+
+.cancel-button {
+    background-color: #f6a644;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cancel-button:hover {
+    background-color: #f4b76d;
+}
+
+
+.burger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000; 
+    margin: 4px;
+    transition: all 0.3s ease; 
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: #fae8d2;
+        width: 100%;
+        top: 68px;
+        left: 0;
+        z-index: 99;
+        border: 1px solid #f5b970;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #f5b970;
+    }
+
+    .dashboard-content {
+        padding: 1px;
+        margin-top: 90px;
+        max-height: none; 
+    }
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .metric {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 12px; 
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .top-artists h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .burger.active div {
+        background-color: #fff;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .profile-dropdown{
+        display: none;
+    }
+
+    .mobile-account-links {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-account-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #fae8d2;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .mobile-account-links {
+        display: none;
+    }
+}

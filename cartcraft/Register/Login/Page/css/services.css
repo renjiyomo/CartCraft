@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2e2;
+}
+
+.burger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000; 
+    margin: 4px;
+    transition: all 0.3s ease; 
+}
+
+.cart-icon {
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transform: scaleX(-1);
+}
+
+.cart-icon:hover {
+    color: #555;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar.hidden {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 60px;
+    margin-top: 100px;
+}
+
+.contact-form {
+    width: 40%;
+    margin-left: 50px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.contact-info{
+    width: 42%;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #808080;
+    border-radius: 0px;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.contact-form button {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    width: 30%;
+    padding: 12px 30px;
+    font-size: 14px;
+    margin: 7px auto;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.contact-form button:hover {
+    background-color: #fdecd8;
+}
+
+.contact-info {
+    color: #333;
+}
+
+.contact-info p {
+    color: #808080;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.contact-info a {
+    color: #808080;
+    text-decoration: none;
+}
+
+
+.contact-icon i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: #333; 
+    font-size: 18px;
+    margin-right: 10px; 
+}
+
+.contact-link{
+    display: flex;
+    margin: 0 80px;
+    color: gray;
+}
+
+.social-links{
+    padding: 20px;
+}
+
+.social-links i {
+    padding: 5px;
+}
+
+.social-links a:hover {
+    color: #0078d7;
+}
+
+.faq-container {
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.faq-container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+    background-color: #fae8d2;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.search-bar {
+    width: 150%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 1px #000000;
+    background-color: #fff2e2;
+}
+
+
+.search-icon {
+position: absolute;
+right: 36%; 
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #000;
+transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+color: #ff5722; 
+}
+
+.freq{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.freq h3{
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.freq-item{
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    padding: 0 80px;
+}
+
+li{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.faq-question {
+    background-color: #fae8d2;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: none;
+    width: 80%;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.faq-question .symbol {
+    position: relative;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f2d2ab;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.social-links a {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 35px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: #fae8d2;
+        width: 100%;
+        top: 68px;
+        left: 0;
+        z-index: 99;
+        border: 1px solid #f5b970;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #f5b970;
+    }
+
+    .dashboard-content {
+        padding: 1px;
+        margin-top: 90px;
+        max-height: none; 
+    }
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .metric {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 12px; 
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .most-liked-products h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .burger.active div {
+        background-color: #fff;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .profile-dropdown{
+        display: none;
+    }
+
+    .mobile-account-links {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-account-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #fae8d2;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .mobile-account-links {
+        display: none;
+    }
+}

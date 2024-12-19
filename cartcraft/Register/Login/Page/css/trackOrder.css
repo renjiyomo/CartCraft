@@ -1,0 +1,404 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff2e2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.track-order-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: #fae8d2;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+    margin-top: 10px;
+}
+
+.track-header {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.back-history{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: black
+}
+
+span{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black
+}
+
+.expected-delivery {
+    font-size: 1.2rem;
+    margin: 10px 40px;
+    font-weight: bold;
+    color: grey;
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.status-icon {
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+    width: 30%;
+}
+
+.status-icon i {
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.status-icon p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.status-icon.active i {
+    color: black;
+}
+
+.status-icon.active p {
+    color: black; 
+}
+
+.status-line {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #ccc; 
+    position: relative;
+    z-index: 0;
+    width: 61%;
+    margin: 0 -7%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.status-line.active {
+    background-color: black;
+}
+
+.order-details {
+    margin: 20px 0;
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    padding: 0 100px;
+}
+
+.order-details img {
+    border: 3px solid #000000;
+    box-shadow: 0 0 0 3px #fff2e2, 0 0 0 6px #000000;
+    min-width: 50px;
+    max-width: 100px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.order-details div {
+    display: flex;
+    flex-grow: 1;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.prod-name{
+    font-size: 16px;
+}
+
+.ref-no{
+    color: grey;
+    font-size: 16px;
+}
+
+.copy-button {
+    margin-left: 10px;
+    padding: 5px 16px;
+    font-size: 0.9rem;
+    background-color: #fff2e2;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #ddd;
+}
+
+.timeline-item {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 200px;
+}
+
+.timeline-item p {
+    margin: 0;
+    padding: 0 30px;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.black {
+    background-color: black;
+}
+
+.grey-text p, 
+.grey-text strong {
+    color: grey;
+    opacity: 85%;
+}
+
+.grey-text .circle {
+    background-color: grey !important;
+}
+
+.timeline-item strong {
+    font-weight: bold;
+}
+
+
+
+.burger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000; 
+    margin: 4px;
+    transition: all 0.3s ease; 
+}
+
+.cart-icon {
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transform: scaleX(-1);
+}
+
+.cart-icon:hover {
+    color: #555;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar.hidden {
+    display: none;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: #fae8d2;
+        width: 100%;
+        top: 68px;
+        left: 0;
+        z-index: 99;
+        border: 1px solid #f5b970;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #f5b970;
+    }
+
+    .dashboard-content {
+        padding: 1px;
+        margin-top: 90px;
+        max-height: none; 
+    }
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .metric {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 12px; 
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .most-liked-products h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .burger.active div {
+        background-color: #fff;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .profile-dropdown{
+        display: none;
+    }
+
+    .mobile-account-links {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-account-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #fae8d2;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .mobile-account-links {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .order-details {
+        padding: 0 10px;
+    }
+
+    .track-head {
+        font-size: 1.2rem;
+    }
+
+    .expected-delivery {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    .status-line {
+        width: 47%;
+    }
+    
+    .status-bar {
+        width: 100%;
+    }
+
+    .order-details img {
+        border: 3px solid #000000;
+        box-shadow: 0 0 0 3px #fff2e2, 0 0 0 6px #000000;
+        min-width: 50px;
+        max-width: 80px;
+        height: 65px;
+        object-fit: cover;
+    }
+    
+
+    .timeline-item {
+        margin-top: 40px;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .timeline-item p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .circle {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        margin: 0 15px;
+    }
+    
+    .black {
+        background-color: black;
+    }
+    
+    .grey-text p, 
+    .grey-text strong {
+        color: grey;
+        opacity: 85%;
+    }
+    
+    .grey-text .circle {
+        background-color: grey !important;
+    }
+    
+    .timeline-item strong {
+        font-weight: bold;
+    }
+
+    .copy-button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

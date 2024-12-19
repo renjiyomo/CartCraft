@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff2e2;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.total-users {
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fae8d2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#payment_method{
+    border-radius: 5px;
+    padding: 3px 0;
+    background-color: #fae8d2;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#order-date, #order-month{
+    border-radius: 5px;
+    padding: 2px 0;
+    border: 1px solid black;
+    background-color: #fae8d2;
+    margin-right: 20px;
+}
+
+.filter-btn{
+    padding: 8px 30px;
+    color: black;
+}
+
+.total-orders {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-align: end;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fae8d2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 10px; 
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+table th, table td {
+    padding: 8px 10px; 
+    text-align: center;
+    border: 1px solid #fff2e2;
+    font-size: 12px;
+    color: #333;
+}
+
+table th {
+    background-color: #f2d2ab;
+    color: #000000;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+table td {
+    font-size: 9px;
+}
+
+.table-wrapper thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #f2d2ab;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.total-sales {
+    font-weight: bold;
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.next-btn{
+    margin-left: 10px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #f2d2ab;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f3cb9a;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+}
+
+
+
+
+.burger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000; 
+    margin: 4px;
+    transition: all 0.3s ease; 
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        background-color: #fae8d2;
+        width: 100%;
+        top: 68px;
+        left: 0;
+        z-index: 99;
+        border: 1px solid #f5b970;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #f5b970;
+    }
+
+    .dashboard-content {
+        padding: 1px;
+        margin-top: 90px;
+        max-height: none; 
+    }
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .metric {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 12px; 
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .top-artists h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .burger.active div {
+        background-color: #fff;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .profile-dropdown{
+        display: none;
+    }
+
+    .mobile-account-links {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-account-links a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #fae8d2;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .mobile-account-links {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: scroll;
+        margin: 0 30px;
+    }
+    
+    table th, table td {
+        font-size: 10px;
+    }
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total-sales{
+        margin-right: 30px;
+    }
+    
+    #payment_method {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
